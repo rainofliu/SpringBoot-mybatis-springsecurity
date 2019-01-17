@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ajin.dao.UserMapper">
+    <resultMap id="UserMap" type="com.ajin.domain.SysUser">
+        <id property="id" column="id"></id>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <collection property="roles" ofType="com.ajin.domain.SysRole">
+            <result column="name" property="name"/>
+        </collection>
+    </resultMap>
+    <!--教程作者不建议在数据库中使用外键，它认为涉及到外键的逻辑全部在应用代码里实现。-->
+    <!--但是这样做的后果，就是会有两个关联查询，会不会影响sql的性能-->
+    <select id="findByUserName" resultMap="UserMap" parameterType="java.lang.String">
+        select u.*
+        ,r.name
+        from Sys_User u
+        LEFT JOIN sys_role_user sru on u.id= sru.Sys_User_id
+        LEFT JOIN Sys_Role r on sru.Sys_Role_id=r.id
+        where username= #{username}
+
+
+    </select>
+</mapper>
