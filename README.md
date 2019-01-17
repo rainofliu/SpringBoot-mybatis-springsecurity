@@ -2,7 +2,7 @@
 
 # SpringBoot+mybatis+springsecurity实现用户角色数据库管理
 
-[TOC]
+
 
 ## 一.正式开始前
 
