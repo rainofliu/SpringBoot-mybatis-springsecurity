@@ -18,7 +18,7 @@
 
 1. 设计数据库并添加数据
 
-   ![](http://pkh8npf4z.bkt.clouddn.com/qiniu_picGo/4630295-0c5f35e25dd6d3bd.png)
+   ![](http://liutianruo-2019-go-go-go.oss-cn-shanghai.aliyuncs.com/images/4630295-0c5f35e25dd6d3bd.png?Expires=1548043681&OSSAccessKeyId=TMP.AQHjDcth939EwJBvv6WQ3zy4HZyjVkISmBcg2WGTIpONkQ_l5bLCTL9L-ygBADAtAhRbucL1S_w2kaRppE-l5K51MDk4FwIVAMHvH5S9iBHHfPepAJEopRX1OpMS&Signature=0GlZwBlHoK0JKFqjMMimMF3sAJE%3D)
 
 >  具体根据sql脚本文件执行,教程的作者建立了三个表，其实两个表（用户表和角色表）就够了，但是作者不喜欢是用外键，而喜欢借助sql语句的多表关联查询来完善没有外键的情况（就多一次关联查询咯）
 
